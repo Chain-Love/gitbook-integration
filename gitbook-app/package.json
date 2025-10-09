@@ -1,0 +1,17 @@
+{
+  "name": "chainlove-gitbook-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "auth": "gitbook auth",
+    "dev": "gitbook dev",
+    "publish": "gitbook publish"
+  },
+  "dependencies": {
+    "@gitbook/runtime": "^0.21.0"
+  },
+  "devDependencies": {
+    "@gitbook/cli": "^0.25.1"
+  }
+}

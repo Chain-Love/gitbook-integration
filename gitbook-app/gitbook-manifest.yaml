@@ -1,0 +1,17 @@
+name: chainlove-widget-yan-v2
+title: ChainLove Compare
+description: Embed compare/toolbox from chain.love
+
+organization: 3rYyjzWiv5GFZtjcKUM3
+scopes: []
+
+visibility: unlisted
+script: ./src/index.jsx
+
+blocks:
+  - id: chainlove-compare
+    title: ChainLove Compare
+    description: Compare providers
+    type: block
+    urlUnfurl:
+      - https://widgets-chain-love.netlify.app/*
