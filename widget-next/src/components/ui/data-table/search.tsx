@@ -61,7 +61,7 @@ export default function Search<TData>({
           table.setGlobalFilter(String(e.target.value));
           resetFilters?.();
         }}
-        className={cn('px-10', inputClassName)}
+        className={cn('px-10 text-gray-8', inputClassName)}
       />
     </div>
   );

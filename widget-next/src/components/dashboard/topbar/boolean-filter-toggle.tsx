@@ -3,7 +3,7 @@
 import React from 'react';
 import { Table } from '@tanstack/react-table';
 
-import { Info, Tag } from 'lucide-react';
+import { Tag } from 'lucide-react';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
 import { cn } from '@/lib/utils';
 
@@ -61,6 +61,7 @@ export default function BooleanFilterToggle<TData>({
         <div className='flex items-center gap-2'>
           <ImageWithFallback
             primary={{ filename: 'trial.svg' }}
+            className='size-6 brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%]'
             fallback={{ lucide: Tag }}
             alt='tag'
           />

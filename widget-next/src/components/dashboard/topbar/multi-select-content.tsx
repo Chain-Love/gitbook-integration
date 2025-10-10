@@ -76,7 +76,7 @@ export default function MultiSelectFilter<TData>({
                 alt={key}
                 primary={icon?.primary}
                 fallback={icon?.fallback}
-                className='size-6 2xl:size-10'
+                className='size-6 brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%] 2xl:size-10'
               />
             </div>
 

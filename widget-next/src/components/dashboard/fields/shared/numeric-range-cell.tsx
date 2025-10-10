@@ -104,7 +104,6 @@ export default function NumericRangeCell({
   suffix,
   precision = 6,
 }: NumericRangeCellProps) {
-  const expanded = ctx?.row?.getIsExpanded();
   const rowAny: any = ctx?.row?.original;
   const id = ctx?.column?.id as string | undefined;
   const col: any = ctx?.column as any;

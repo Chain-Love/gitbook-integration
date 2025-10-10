@@ -24,7 +24,7 @@ function RadioRow({
   return (
     <div
       className={cn(
-        'group flex cursor-pointer items-center gap-3 rounded-none p-3',
+        'group flex cursor-pointer items-center gap-3 rounded-none p-3 px-6',
         disabled && 'cursor-not-allowed opacity-50',
       )}
       data-selected={selected ? '' : undefined}
@@ -37,7 +37,7 @@ function RadioRow({
       >
         <span
           className={cn(
-            'size-2 rounded-full bg-contrast-white transition-opacity',
+            'size-2 rounded-full bg-white transition-opacity',
             selected ? 'opacity-100' : 'opacity-0',
           )}
         />

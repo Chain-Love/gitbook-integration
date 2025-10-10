@@ -47,7 +47,7 @@ export default function TableSkeleton<TData>({ table }: TableSkeleton<TData>) {
           if (rowIdx >= visibleRows) return null;
 
           return (
-            <div key={rowIdx} className='flex items-stretch gap-0 bg-[#222221]'>
+            <div key={rowIdx} className='flex items-stretch gap-0 bg-sand-6'>
               <div className='flex items-center py-3 pl-10 pr-5'>
                 <div className='size-6 rounded-md border-2 bg-gray-4' />
               </div>
