@@ -1,6 +1,6 @@
 name: chainlove-widget
-title: ChainLove Compare
-description: discover, compare, and access Web3 services seamlessly.
+title: Chain.Love
+description: Discover, compare, and access Web3 services seamlessly.
 
 organization: emI0zOgCq9zPJEaYhplq
 scopes: []
@@ -10,7 +10,7 @@ script: ./src/index.jsx
 
 blocks:
   - id: chainlove-compare
-    title: ChainLove Compare
+    title: Chain.Love
     description: Compare providers
     type: block
     urlUnfurl:
