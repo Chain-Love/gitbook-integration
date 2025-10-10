@@ -9,7 +9,6 @@ import { IconConfig } from '@/components/ui/image-with-fallback';
 import { getTotalActiveFilters } from '@/utils';
 import type { ProvidersResponse } from '@/service/infrastructureProvidersApi/types';
 import { buildAvailableCategories } from './available-categories';
-import { useOriginNetworkFromURL } from '@/hooks/useOriginNetworkFromURL';
 
 type FilterMetaItem = {
   options?: string[];

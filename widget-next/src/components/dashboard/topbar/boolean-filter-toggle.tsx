@@ -3,7 +3,7 @@
 import React from 'react';
 import { Table } from '@tanstack/react-table';
 
-import { Info, Tag } from 'lucide-react';
+import { Tag } from 'lucide-react';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
 import { cn } from '@/lib/utils';
 
