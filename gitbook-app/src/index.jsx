@@ -13,7 +13,7 @@ const CompareBlock = createComponent({
 
     return (
       <block>
-        <webframe source={{ url }} height={980} />
+        <webframe source={{ url }} aspectRatio={16 / 9} />
       </block>
     );
   },

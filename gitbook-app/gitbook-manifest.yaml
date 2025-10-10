@@ -1,6 +1,6 @@
 name: chainlove-widget
 title: ChainLove Compare
-description: Embed compare/toolbox from chain.love
+description: discover, compare, and access Web3 services seamlessly.
 
 organization: emI0zOgCq9zPJEaYhplq
 scopes: []
@@ -15,3 +15,24 @@ blocks:
     type: block
     urlUnfurl:
       - https://docs-widget-wine.vercel.app/*
+
+previewImages:
+  - ./assets/twitter-banner-chainlove.png
+  - ./assets/widget-example.png
+
+icon: ./assets/chainlove.png
+
+summary: |
+  Chain.Love provides a curated list of Web3 services that can be seamlessly embedded into your documentation.
+  All data comes from an open-source, community-maintained database where any developer can contribute.
+  This widget is designed for blockchain networks looking to enhance developer experience and onboarding while reducing the effort spent on maintaining service documentation.
+  Chain.Love supports all networks listed in its public GitHub repository — if you notice a missing network or service provider, simply submit a PR and contribute to the public good.
+
+categories:
+  - analytics
+
+externalLinks:
+  - label: Website
+    url: https://chain.love
+  - label: GitHub
+    url: https://github.com/Chain-Love/chain-love
