@@ -156,34 +156,45 @@ export default function AllFiltersDropdown<TData>({
     <Sheet>
       <SheetTrigger
         className={cn(
-          'flex size-full items-center justify-center gap-4 rounded-none bg-gray-3 px-4 py-3 text-sm font-semibold transition-colors hover:bg-gray-5',
+          'flex size-full items-center justify-center rounded-none bg-gray-3 px-4 py-3 text-sm font-semibold transition-colors hover:bg-gray-5',
         )}
       >
         <ImageWithFallback
           primary={{ filename: 'funnel.svg' }}
           fallback={{ lucide: Filter }}
           alt='Filter'
-          className='size-6'
+          className='mr-2 size-6 text-gray-11'
         />
         <span className='text-gray-11'>Filter</span>
 
-        {activeCount > 0 && (
-          <Badge
-            variant='outline'
-            className={cn(
-              'size-5 place-content-center bg-accent-9 px-0 font-medium',
-            )}
-          >
-            {activeCount}
-          </Badge>
-        )}
+        <div className='ml-auto flex gap-1 md:gap-6'>
+          {activeCount > 0 && (
+            <Badge
+              variant='outline'
+              className={cn(
+                'ml-auto size-5 place-content-center bg-accent-9 px-0 font-medium',
+              )}
+            >
+              {activeCount}
+            </Badge>
+          )}
 
-        <ChevronDown className='ml-auto size-4 transition-transform group-data-[state=open]:rotate-180' />
+          <ChevronDown className='size-4 transition-transform group-data-[state=open]:rotate-180' />
+        </div>
       </SheetTrigger>
       <SheetContent side='right' className='bg-gray-4 p-0' container={true}>
         <div className='flex h-full flex-col'>
-          <SheetHeader className='flex-row items-center justify-between border-b p-4'>
-            <SheetTitle className='text-2xl font-light'>Filters</SheetTitle>
+          <SheetHeader className='flex-row items-center justify-between border-b bg-gray-4 p-4'>
+            <SheetTitle className='flex items-center gap-2 text-sm font-semibold text-gray-11'>
+              <ImageWithFallback
+                primary={{ filename: 'funnel.svg' }}
+                fallback={{ lucide: Filter }}
+                className='size-6 brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%]'
+                alt='Filters'
+                size={24}
+              />
+              Filters
+            </SheetTitle>
             <Badge
               variant='outline'
               className={cn(

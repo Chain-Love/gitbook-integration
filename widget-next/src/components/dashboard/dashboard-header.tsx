@@ -28,7 +28,7 @@ export default function DashboardHeader() {
         href='https://chatgpt.com/g/g-68bf52c0b60c8191a56c6f98959b97ec-chain-love'
         target='_blank'
         rel='noopener noreferrer'
-        className='flex h-6 items-center gap-1 rounded-sm bg-accent-9 px-1 text-sm transition-colors duration-100 hover:bg-accent-10 xs:h-8 xs:gap-2 xs:px-3'
+        className='flex h-6 items-center gap-1 rounded-sm bg-accent-9 px-1 text-sm text-white transition-colors duration-100 hover:bg-accent-10 xs:h-8 xs:gap-2 xs:px-3'
       >
         <ImageWithFallback
           primary={{

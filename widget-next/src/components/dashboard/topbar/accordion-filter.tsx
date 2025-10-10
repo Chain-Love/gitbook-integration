@@ -36,6 +36,7 @@ export default function AccordionFilter({
             fallback={icon?.fallback}
             alt={title}
             size={24}
+            className='brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%]'
           />
 
           <p className='text-sm'>{title}</p>
@@ -44,7 +45,7 @@ export default function AccordionFilter({
         {activeCount > 0 && (
           <Badge
             variant='outline'
-            className='ml-auto mr-6 flex min-w-14 place-content-center bg-accent-9 text-xs font-medium'
+            className='ml-auto mr-6 flex place-content-center bg-accent-9 px-[6px] text-xs font-medium'
           >
             {totalCount ? `${activeCount}/${totalCount}` : activeCount}
           </Badge>

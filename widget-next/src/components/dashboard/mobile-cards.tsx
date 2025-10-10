@@ -87,7 +87,7 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
         return (
           <div
             key={headerGroup.id}
-            className='flex items-center justify-between gap-3 border-b border-gray-3 bg-gray-2 p-4 px-6'
+            className='flex items-center justify-between gap-3 border-b border-gray-6 bg-gray-3 p-4 px-6'
           >
             <div className='flex items-center gap-4 md:min-w-[310px]'>
               <SelectAllRows table={table} />
@@ -255,7 +255,9 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
                     {expanded ? <CircleMinus /> : <CirclePlus />}
                   </div>
                   {/* Name + Count */}
-                  <span className='mr-4 text-accent-12'>{rowAny.provider}</span>
+                  <span className='mr-4 font-medium text-accent-12'>
+                    {rowAny.provider}
+                  </span>
                   <span className='rounded bg-accent-9 px-2 py-0.5 text-xs text-contrast-white'>
                     +{actualCount}
                   </span>
@@ -351,6 +353,7 @@ function getCardLabel<C extends CategoryKey>(
         <ImageWithFallback
           primary={meta.icon.primary}
           fallback={meta.icon.fallback}
+          className='brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%]'
           alt={alt}
           size={24}
         />

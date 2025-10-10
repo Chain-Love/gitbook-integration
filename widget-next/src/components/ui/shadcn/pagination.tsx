@@ -72,7 +72,7 @@ const PaginationPrevious = ({
     aria-label='Go to previous page'
     size='sm'
     className={cn(
-      'gap-2 px-2 text-base text-[#B0B4BA] sm:pl-2.5 sm:pr-4',
+      'gap-2 px-2 text-base text-gray-11 sm:pl-2.5 sm:pr-4',
       className,
     )}
     {...props}
@@ -91,7 +91,7 @@ const PaginationNext = ({
     aria-label='Go to next page'
     size='sm'
     className={cn(
-      'gap-2 px-2 text-base text-[#B0B4BA] sm:pl-4 sm:pr-2.5',
+      'gap-2 px-2 text-base text-gray-11 sm:pl-4 sm:pr-2.5',
       className,
     )}
     {...props}

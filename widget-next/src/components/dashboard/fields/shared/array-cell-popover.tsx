@@ -27,7 +27,6 @@ export default function ArrayCellPopover({
   ctx,
 }: ArrayCellPopoverProps) {
   let value = rawValue;
-  const expanded = ctx?.row?.getIsExpanded();
   const rowAny: any = ctx?.row?.original;
   const id = ctx?.column?.id as string | undefined;
 
