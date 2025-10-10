@@ -123,7 +123,7 @@ export default function Dashboard() {
   );
 
   return (
-    <>
+    <div className='overflow-hidden rounded-lg border-x border-gray-6'>
       <div className='grid w-full grid-cols-[minmax(0px,_1fr)] gap-4'>
         <div className='rounded-xl bg-gray-1'>
           <TopFiltersBar
@@ -165,6 +165,6 @@ export default function Dashboard() {
         }))}
         categoryId={(selectedCategoryId ?? 'rpc') as CategoryKey}
       />
-    </>
+    </div>
   );
 }

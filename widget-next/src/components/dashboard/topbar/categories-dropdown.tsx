@@ -117,7 +117,11 @@ export default function CategoriesDropdown({
 
         <ChevronDown className='size-4 transition-transform group-data-[state=open]:rotate-180' />
       </SheetTrigger>
-      <SheetContent side='right' className='w-4/5 bg-gray-4 p-0'>
+      <SheetContent
+        side='right'
+        className='w-4/5 border-l-0 bg-gray-4 p-0'
+        container={true}
+      >
         <div className='flex h-full flex-col'>
           <SheetHeader className='flex-row items-center justify-between border-b p-4'>
             <SheetTitle className='text-2xl font-semibold'>

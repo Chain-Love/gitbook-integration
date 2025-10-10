@@ -182,7 +182,11 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
                 <SheetTrigger className='flex size-full items-center justify-center rounded-none text-sm font-semibold'>
                   <Settings className='size-5 text-gray-11' aria-hidden />
                 </SheetTrigger>
-                <SheetContent side='right' className='bg-gray-4 p-0'>
+                <SheetContent
+                  side='right'
+                  className='bg-gray-4 p-0'
+                  container={true}
+                >
                   <div className='flex h-full flex-col'>
                     <SheetHeader className='flex-row items-center justify-between border-b p-4'>
                       <SheetTitle className='text-xl font-light'>
@@ -221,8 +225,9 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
             <Fragment key={row.id}>
               <div
                 className={cn(
-                  'flex cursor-pointer items-center justify-between gap-3 border-b border-sand-4 bg-gray-3 p-4 px-6',
-                  shouldShowStarred(row) && 'border-sand-5 bg-[#3E3128]',
+                  'flex cursor-pointer items-center justify-between gap-3 border-b border-sand-7 bg-sand-4 p-4 px-6 hover:bg-sand-5',
+                  shouldShowStarred(row) &&
+                    'dash-accent dash-top-accent dash-bottom-accent border-sand-5 bg-[#EBDACA] dark:bg-[#3E3128]',
                 )}
                 onClick={row.getToggleExpandedHandler()}
               >
@@ -392,7 +397,7 @@ function MobileCard<C extends CategoryKey>({
       <div
         className={cn(
           'flex h-[60px] cursor-pointer items-center justify-between gap-4 border-b border-sand-6 bg-sand-3 px-6 font-medium text-accent-12 hover:bg-sand-4',
-          expanded && 'border-sand-5 bg-gray-4',
+          expanded && 'border-sand-6 bg-sand-3 hover:bg-sand-4',
         )}
         onClick={onToggle}
       >
@@ -418,7 +423,14 @@ function MobileCard<C extends CategoryKey>({
               )}
             />
           )}
+
           <span>{row.original.provider}</span>
+          {shouldShowStarred(row) && (
+            <span className='ml-4 flex items-center rounded-sm border border-accent-12 px-2 py-1 text-xs'>
+              <span className='text-[10px] xs:mr-[6px]'>AD</span>
+              <span className='hidden xs:block'>Sponsored</span>
+            </span>
+          )}
         </div>
 
         {row
@@ -440,12 +452,6 @@ function MobileCard<C extends CategoryKey>({
             </div>
           ))}
 
-        {shouldShowStarred(row) && (
-          <span className='ml-4 items-center rounded-sm border border-accent-12 px-2 py-1 text-xs'>
-            <span className='mr-[6px] text-[10px]'>AD</span>
-            <span className='hidden xs:block'>Sponsored</span>
-          </span>
-        )}
         <div className='ml-auto flex justify-end md:ml-0 md:w-[90px]'>
           <ChevronDown
             className={cn(
