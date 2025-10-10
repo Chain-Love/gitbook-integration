@@ -68,7 +68,7 @@ export default function TopFiltersBar<TData>({
         />
       )}
 
-      <div className='w-full max-w-[50%]'>
+      <div className='w-full'>
         <AllFiltersDropdown
           filterMeta={filterMeta}
           table={table}
