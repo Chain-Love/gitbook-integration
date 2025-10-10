@@ -61,7 +61,7 @@ export default function CategoriesDropdown({
                 >
                   <span
                     className={cn(
-                      'absolute size-2 rounded-full bg-contrast-white transition-opacity',
+                      'absolute size-2 rounded-full bg-white transition-opacity',
                       isSelected ? 'opacity-100' : 'opacity-0',
                     )}
                   />
@@ -70,7 +70,7 @@ export default function CategoriesDropdown({
                 {c.providersCount > 0 && (
                   <Badge
                     variant='outline'
-                    className='bg-accent-9 px-1.5 text-xs font-medium'
+                    className='bg-accent-9 px-1.5 text-xs font-medium text-white'
                   >
                     {c.providersCount}
                   </Badge>
@@ -83,7 +83,7 @@ export default function CategoriesDropdown({
                   primary={(CATEGORIES[c.key]?.icon as any)?.primary}
                   fallback={(CATEGORIES[c.key]?.icon as any)?.fallback}
                   alt={`${c.key} icon`}
-                  className='size-8 shrink-0'
+                  className='size-8 shrink-0 brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%]'
                 />
 
                 {/* Title → column 2 */}
@@ -113,7 +113,7 @@ export default function CategoriesDropdown({
           size={24}
           alt='category'
         />
-        <p className='text-sm font-medium leading-none'>Category</p>
+        <p className='text-sm font-medium leading-none text-white'>Category</p>
 
         <ChevronDown className='size-4 transition-transform group-data-[state=open]:rotate-180' />
       </SheetTrigger>
@@ -124,7 +124,7 @@ export default function CategoriesDropdown({
       >
         <div className='flex h-full flex-col'>
           <SheetHeader className='flex-row items-center justify-between border-b p-4'>
-            <SheetTitle className='text-2xl font-semibold'>
+            <SheetTitle className='text-2xl font-semibold text-gray-11'>
               Categories
             </SheetTitle>
             <SheetClose className='opacity-70 transition-opacity'>

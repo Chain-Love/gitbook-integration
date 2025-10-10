@@ -90,7 +90,6 @@ export const ColumnVisibilityContent = <TData,>({
             </div>
             <PopoverTooltip>
               <PopoverTrigger
-                asChild
                 className={cn(isDisabled ? 'cursor-help' : 'cursor-pointer')}
               >
                 <InfoIcon

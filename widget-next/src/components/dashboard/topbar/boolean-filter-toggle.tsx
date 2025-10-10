@@ -61,6 +61,7 @@ export default function BooleanFilterToggle<TData>({
         <div className='flex items-center gap-2'>
           <ImageWithFallback
             primary={{ filename: 'trial.svg' }}
+            className='size-6 brightness-0 invert-[39%] saturate-0 sepia-0 dark:invert-[71%]'
             fallback={{ lucide: Tag }}
             alt='tag'
           />
