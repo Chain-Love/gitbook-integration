@@ -254,13 +254,6 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
                   >
                     {expanded ? <CircleMinus /> : <CirclePlus />}
                   </div>
-                  {/* Name + Count */}
-                  <span className='mr-4 font-medium text-accent-12'>
-                    {rowAny.provider}
-                  </span>
-                  <span className='rounded bg-accent-9 px-2 py-0.5 text-xs text-contrast-white'>
-                    +{actualCount}
-                  </span>
 
                   {/* Sponsored label for groups */}
                   {shouldShowStarred(row) && (
@@ -269,6 +262,14 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
                       <span className='hidden xs:block'>Sponsored</span>
                     </span>
                   )}
+
+                  {/* Name + Count */}
+                  <span className='mr-4 font-medium text-accent-12'>
+                    {rowAny.provider}
+                  </span>
+                  <span className='rounded bg-accent-9 px-2 py-0.5 text-xs text-contrast-white'>
+                    +{actualCount}
+                  </span>
                 </div>
                 {row.getVisibleCells().map(cell => {
                   if (!['plan', 'nodeType', 'chain'].includes(cell.column.id))
