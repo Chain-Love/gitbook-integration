@@ -227,7 +227,7 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
                 className={cn(
                   'flex cursor-pointer items-center justify-between gap-3 border-b border-sand-7 bg-sand-4 p-4 px-6 hover:bg-sand-5',
                   shouldShowStarred(row) &&
-                    'dash-accent dash-top-accent dash-bottom-accent border-sand-5 bg-[#EBDACA] dark:bg-[#3E3128]',
+                    'dash-accent dash-top-accent dash-bottom-accent border-b-0 bg-[#EBDACA] dark:bg-[#3E3128]',
                 )}
                 onClick={row.getToggleExpandedHandler()}
               >
@@ -257,9 +257,9 @@ export default function MobileCards<C extends CategoryKey = CategoryKey>({
 
                   {/* Sponsored label for groups */}
                   {shouldShowStarred(row) && (
-                    <span className='ml-4 flex items-center rounded-sm border border-accent-12 px-2 py-1 text-xs'>
-                      <span className='text-[10px] xs:mr-[6px]'>AD</span>
-                      <span className='hidden xs:block'>Sponsored</span>
+                    <span className='mr-4 flex items-center rounded-sm border border-accent-12 px-2 py-1 text-xs'>
+                      <span className='text-[10px] md:mr-[6px]'>AD</span>
+                      <span className='hidden md:block'>Sponsored</span>
                     </span>
                   )}
 
@@ -402,6 +402,8 @@ function MobileCard<C extends CategoryKey>({
         className={cn(
           'flex h-[60px] cursor-pointer items-center justify-between gap-4 border-b border-sand-6 bg-sand-3 px-6 font-medium text-accent-12 hover:bg-sand-4',
           expanded && 'border-sand-6 bg-sand-3 hover:bg-sand-4',
+          shouldShowStarred(row) &&
+            'dash-accent dash-top-accent dash-bottom-accent border-b-0 bg-[#EBDACA] dark:bg-[#3E3128]',
         )}
         onClick={onToggle}
       >
@@ -428,13 +430,14 @@ function MobileCard<C extends CategoryKey>({
             />
           )}
 
-          <span>{row.original.provider}</span>
           {shouldShowStarred(row) && (
-            <span className='ml-4 flex items-center rounded-sm border border-accent-12 px-2 py-1 text-xs'>
+            <span className='flex items-center rounded-sm border border-accent-12 px-2 py-1 text-xs'>
               <span className='text-[10px] xs:mr-[6px]'>AD</span>
               <span className='hidden xs:block'>Sponsored</span>
             </span>
           )}
+
+          <span>{row.original.provider}</span>
         </div>
 
         {row
