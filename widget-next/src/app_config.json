@@ -3,6 +3,26 @@
   "proteusShieldDocs": "https://protofire-org.gitbook.io/chain-love-docs/",
 
   "dataSources": {
+    "algorand": {
+      "url": "https://raw.githubusercontent.com/Chain-Love/chain-love/json/json/algorand.json",
+      "originNetwork": {
+        "name": "Algorand",
+        "icon": "algorand-mainnet.svg",
+        "chains": [
+          {
+            "name": "Algorand",
+            "icon": "algorand-mainnet.svg",
+            "key": "mainnet"
+          },
+          {
+            "name": "Algorand Testnet",
+            "icon": "algorand-testnet.svg",
+            "key": "testnet"
+          }
+        ]
+      }
+    },
+
     "arbitrum": {
       "url": "https://raw.githubusercontent.com/Chain-Love/chain-love/json/json/arbitrum.json",
       "originNetwork": {
