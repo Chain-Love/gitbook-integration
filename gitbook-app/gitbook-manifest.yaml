@@ -15,6 +15,7 @@ blocks:
     type: block
     urlUnfurl:
       - https://docs-widget-wine.vercel.app/*
+      - https://widget.docs.chain.love/*
 
 previewImages:
   - ./assets/twitter-banner-chainlove.png
