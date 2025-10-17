@@ -79,7 +79,7 @@ export default function FloatingBar({
           }}
           style={{ willChange: 'transform' }}
           className={cn(
-            'fixed inset-x-0 bottom-0 z-50 border-t bg-gray-2/90 p-4 shadow-lg backdrop-blur-[6.5px] supports-[backdrop-filter]:bg-gray-2/80',
+            'sticky inset-x-0 bottom-0 z-50 border-t bg-gray-2/90 p-4 shadow-lg backdrop-blur-[6.5px] supports-[backdrop-filter]:bg-gray-2/80',
             className,
           )}
           role='region'
@@ -89,7 +89,7 @@ export default function FloatingBar({
             <div className='flex items-center gap-6'>
               <button
                 onClick={onClearSelection}
-                className='w-full text-accent-9 transition-colors hover:text-white md:text-white/80'
+                className='w-full text-accent-9 transition-colors hover:text-contrast-white'
               >
                 Clear All
               </button>
