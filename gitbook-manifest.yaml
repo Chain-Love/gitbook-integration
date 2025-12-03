@@ -1,11 +1,11 @@
-name: chainlove-widget
+name: chainlove-widget-option-3
 title: Chain.Love
 description: Discover, compare, and access Web3 services seamlessly.
 
 organization: emI0zOgCq9zPJEaYhplq
 scopes: []
 
-visibility: public
+visibility: private
 script: ./src/index.jsx
 
 blocks:
