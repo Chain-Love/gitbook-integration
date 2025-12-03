@@ -16,6 +16,7 @@ blocks:
     urlUnfurl:
       - https://docs-widget-wine.vercel.app/*
       - https://widget.docs.chain.love/*
+      - https://docs-widget-git-variant-3-polling-protofire-dao.vercel.app/*
 
 previewImages:
   - ./assets/twitter-banner-chainlove.png
