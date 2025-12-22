@@ -1,11 +1,11 @@
-name: chainlove-widget
+name: chainlove-widget-option-4
 title: Chain.Love
 description: Discover, compare, and access Web3 services seamlessly.
 
 organization: emI0zOgCq9zPJEaYhplq
 scopes: []
 
-visibility: public
+visibility: private
 script: ./src/index.jsx
 
 blocks:
@@ -16,6 +16,7 @@ blocks:
     urlUnfurl:
       - https://docs-widget-wine.vercel.app/*
       - https://widget.docs.chain.love/*
+      - https://docs-widget-git-variant-4-marketo-embed-protofire-dao.vercel.app/*
 
 previewImages:
   - ./assets/twitter-banner-chainlove.png
