@@ -1,5 +1,5 @@
 name: chainlove-widget-option-4
-title: Chain.Love
+title: Chain.Love Demo
 description: Discover, compare, and access Web3 services seamlessly.
 
 organization: emI0zOgCq9zPJEaYhplq
@@ -10,13 +10,14 @@ script: ./src/index.jsx
 
 blocks:
   - id: chainlove-compare
-    title: Chain.Love
+    title: Chain.Love Demo
     description: Compare providers
     type: block
     urlUnfurl:
       - https://docs-widget-wine.vercel.app/*
       - https://widget.docs.chain.love/*
       - https://docs-widget-git-variant-4-marketo-embed-protofire-dao.vercel.app/*
+      - https://widget-green-tau.vercel.app/*
 
 previewImages:
   - ./assets/twitter-banner-chainlove.png
