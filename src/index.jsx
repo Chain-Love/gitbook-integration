@@ -44,10 +44,7 @@ const CompareBlock = createComponent({
     const url = props?.url;
     const size = props?.size;
 
-    const aspectRatio =
-      typeof size?.aspectRatio === "number" && size.aspectRatio > 0
-        ? size.aspectRatio
-        : undefined;
+    const aspectRatio = size?.aspectRatio;
 
     console.log("[CompareBlock] render with props:", props);
 
