@@ -19,31 +19,41 @@ const CompareBlock = createComponent({
       };
     }
 
-    // Let GitBook handle @webframe.ready / @webframe.resize internally.
-    // We don't need to mutate props for those actions.
+    // Handle @webframe.resize: persist size into props so we can
+    // drive the <webframe> aspectRatio on re-render.
+    if (action.action === "@webframe.resize" && action.size) {
+      console.log("[CompareBlock] @webframe.resize received", action.size);
+
+      return {
+        props: {
+          ...prevProps,
+          size: action.size,
+        },
+      };
+    }
+
+    // @webframe.ready and any other actions do not need to change props
     if (action.action === "@webframe.ready") {
       console.log("[CompareBlock] @webframe.ready received");
-      return { props: { ...prevProps } };
     }
 
-    if (action.action === "@webframe.resize") {
-      console.log("[CompareBlock] @webframe.resize received", action.size);
-      return { props: { ...prevProps } };
-    }
-
-    // For any other actions, keep the previous props unchanged
     return { props: { ...prevProps } };
   },
 
   async render({ props }) {
     const url = props?.url;
+    const size = props?.size;
+
+    const aspectRatio =
+      typeof size?.aspectRatio === "number" && size.aspectRatio > 0
+        ? size.aspectRatio
+        : undefined;
 
     console.log("[CompareBlock] render with props:", props);
 
     return (
       <block>
-        {/* aspectRatio is only the initial placeholder; height should be driven by @webframe.resize */}
-        <webframe source={{ url }} />
+        <webframe source={{ url }} aspectRatio={aspectRatio} />
       </block>
     );
   },
